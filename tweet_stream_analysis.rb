@@ -3,7 +3,7 @@ require 'time'
 
 class TweetAnalysis
 	
-	@@stop_words = ['are','this','that','im','who','the','a','for','i','you','and','me','it','or','but','&amp;','to','on','if','with','as','is','be','in','my','of','not','at','so']
+	@@stop_words = ['was','amp','your','are','this','that','im','who','the','a','for','i','you','and','me','it','or','but','&amp;','to','on','if','with','as','is','be','in','my','of','not','at','so']
 
 	def initialize
 		@word_count = 0
@@ -77,6 +77,7 @@ end
 
 start_time = Time.now()
 tweet_analysis = TweetAnalysis.new()
+puts "Currently getting tweets from Twitter ....."
 tweet_analysis.get_tweets
 puts "Getting the tweets took: #{Time.now()- start_time} seconds"
 
